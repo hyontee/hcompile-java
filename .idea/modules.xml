@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.iml" filepath="$PROJECT_DIR$/.idea/modules/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MATRESHKA_RP_by_EDGAR_3.0_NEWLAUNCHER_VERSION.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
