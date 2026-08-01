@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@+id/guideline42" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.2089"/>
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@+id/guideline40" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.065"/>
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@+id/guideline41" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.9365"/>
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/guideline35" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.1338"/>
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/guideline39" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.8662"/>
+    <ImageView android:background="#1d1620" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY"/>
+    <ImageView android:layout_width="0dp" android:layout_height="0dp" android:scaleType="fitEnd" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/launcher_bg_pic"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" app:srcCompat="@drawable/launcher_bg"/>
+    <ImageView android:id="@+id/btn_close" android:layout_width="@dimen/_23sdp" android:layout_height="@dimen/_39sdp" app:layout_constraintStart_toStartOf="@+id/guideline35" app:layout_constraintTop_toTopOf="@+id/guideline40" app:srcCompat="@drawable/ic_launcher_close"/>
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/btn_faq" android:layout_width="@dimen/_23sdp" android:layout_height="@dimen/_39sdp" app:layout_constraintEnd_toStartOf="@+id/guideline39" app:layout_constraintTop_toTopOf="@+id/guideline40" app:srcCompat="@drawable/ic_launcher_faq"/>
+
+    <LinearLayout
+        android:id="@+id/auth_layout_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/auth_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline39"
+        app:layout_constraintStart_toStartOf="@+id/guideline35"
+        app:layout_constraintTop_toTopOf="@+id/guideline42">
+
+        <TextView
+            android:id="@+id/main_caption_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ttnorms_regular"
+            android:gravity="center"
+            android:text="Зарегистрироваться"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/main_caption_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ttnorms_bold"
+            android:gravity="center"
+            android:text="на МАТРЕШКЕ"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/main_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:fontFamily="@font/ttnorms_regular"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_18sdp"
+            android:text="Создайте профиль или авторизуйтесь чтобы погрузиться в безграничные возможности нашей замечательной игры."
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/_10sdp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/main_btn_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_42sdp"
+                        android:background="@drawable/auth_bg_email">
+
+                        <ImageView
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_launcher_mail" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_37sdp"
+                            android:layout_marginEnd="@dimen/_37sdp"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:gravity="center"
+                            android:text="Войти через эл. почту"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_10sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/main_btn_google"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/auth_bg_google">
+
+                        <ImageView
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_launcher_google" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_37sdp"
+                            android:layout_marginEnd="@dimen/_37sdp"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:gravity="center"
+                            android:text="Продолжить через Google"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_10sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/main_btn_vk"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/auth_bg_vk">
+
+                        <ImageView
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_launcher_vk" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_37sdp"
+                            android:layout_marginEnd="@dimen/_37sdp"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:gravity="center"
+                            android:text="Продолжить через VK"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_10sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/policy_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/ttnorms_regular"
+            android:gravity="center"
+            android:text="Продолжая, вы принимаете Договор-оферту и подтверждаете, что прочли Политику конфиденциальности."
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/auth_layout_email"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/auth_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline39"
+        app:layout_constraintStart_toStartOf="@+id/guideline35"
+        app:layout_constraintTop_toTopOf="@+id/guideline42">
+
+        <TextView
+            android:id="@+id/email_caption_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ttnorms_regular"
+            android:gravity="center"
+            android:text="Регистрация"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/email_caption_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ttnorms_bold"
+            android:gravity="center"
+            android:text="через почту"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/email_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:fontFamily="@font/ttnorms_regular"
+            android:gravity="center_horizontal"
+            android:minLines="3"
+            android:paddingBottom="@dimen/_6sdp"
+            android:text="Создайте профиль или авторизуйтесь чтобы погрузиться в безграничные возможности нашей замечательной игры."
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/_10sdp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/email_layout_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <ImageView
+                                android:id="@+id/email_layout_email_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/auth_bg_email" />
+
+                            <ImageView
+                                android:id="@+id/email_layout_email_image"
+                                android:layout_width="@dimen/_9sdp"
+                                android:layout_height="@dimen/_9sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                app:srcCompat="@drawable/ic_launcher_mail" />
+
+                            <EditText
+                                android:id="@+id/email_layout_email_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_42sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/ttnorms_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Введите вашу почту"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ffffff"
+                                android:textColorHighlight="#ffffff"
+                                android:textColorHint="#66ffffff"
+                                android:textColorLink="#ffffff"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/email_layout_email_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/email_layout_email_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/email_layout_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <ImageView
+                                android:id="@+id/email_layout_pass_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/auth_bg_email" />
+
+                            <ImageView
+                                android:id="@+id/email_layout_pass_image"
+                                android:layout_width="@dimen/_9sdp"
+                                android:layout_height="@dimen/_9sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                app:srcCompat="@drawable/ic_launcher_password" />
+
+                            <EditText
+                                android:id="@+id/email_layout_pass_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_42sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/ttnorms_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Введите пароль"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ffffff"
+                                android:textColorHighlight="#ffffff"
+                                android:textColorHint="#66ffffff"
+                                android:textColorLink="#ffffff"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/email_layout_pass_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/email_layout_pass_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/email_layout_pass_recover"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:paddingTop="@dimen/_6sdp"
+                            android:text="Забыли пароль?"
+                            android:textAlignment="textEnd"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_7sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/email_layout_repeat_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <ImageView
+                                android:id="@+id/email_layout_repeat_pass_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/auth_bg_email" />
+
+                            <ImageView
+                                android:id="@+id/email_layout_repeat_pass_image"
+                                android:layout_width="@dimen/_9sdp"
+                                android:layout_height="@dimen/_9sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                app:srcCompat="@drawable/ic_launcher_password" />
+
+                            <EditText
+                                android:id="@+id/email_layout_repeat_pass_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_42sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/ttnorms_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Повторите пароль"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ffffff"
+                                android:textColorHighlight="#ffffff"
+                                android:textColorHint="#66ffffff"
+                                android:textColorLink="#ffffff"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/email_layout_repeat_pass_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/email_layout_repeat_pass_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/email_layout_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/email_layout_code_send"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:paddingBottom="@dimen/_6sdp"
+                            android:text="Не пришёл код? Отправить повторно"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_7sdp" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <ImageView
+                                android:id="@+id/email_layout_code_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/auth_bg_email" />
+
+                            <ImageView
+                                android:id="@+id/email_layout_code_image"
+                                android:layout_width="@dimen/_9sdp"
+                                android:layout_height="@dimen/_9sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                app:srcCompat="@drawable/ic_launcher_code" />
+
+                            <EditText
+                                android:id="@+id/email_layout_code_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_42sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/ttnorms_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Введите код из Email"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ffffff"
+                                android:textColorHighlight="#ffffff"
+                                android:textColorHint="#66ffffff"
+                                android:textColorLink="#ffffff"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/email_layout_code_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/email_layout_code_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/email_layout_continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:background="@drawable/auth_bg_button">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_37sdp"
+                            android:layout_marginEnd="@dimen/_37sdp"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:gravity="center"
+                            android:text="Продолжить"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_12sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/auth_bottom" android:paddingTop="@dimen/_18sdp" android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/guideline41" app:layout_constraintEnd_toStartOf="@+id/guideline39" app:layout_constraintStart_toStartOf="@+id/guideline35">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/_14sdp" android:layout_height="@dimen/_14sdp" app:srcCompat="@drawable/ic_launcher_faq"/>
+        <TextView android:textSize="@dimen/_11sdp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:id="@+id/faq_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Проблемы? Мы можем вам помочь!" android:fontFamily="@font/ttnorms_regular" android:layout_marginStart="@dimen/_8sdp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

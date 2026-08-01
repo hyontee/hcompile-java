@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.065" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1338" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8662" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9365" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1d1620"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/launcher_bg_pic" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/launcher_bg" />
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline49"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toTopOf="@+id/guideline50">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ttnorms_regular"
+                android:text="Создание"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ttnorms_bold"
+                android:text="персонажа"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_16sdp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_faq"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_14sdp"
+            app:srcCompat="@drawable/ic_launcher_faq" />
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_launcher_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/character_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline51"
+        app:layout_constraintEnd_toStartOf="@+id/guideline49"
+        app:layout_constraintStart_toStartOf="@+id/guideline48"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/char_caption_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ttnorms_medium"
+                        android:gravity="center_vertical"
+                        android:text="Никнейм свободен,"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <TextView
+                        android:id="@+id/char_caption_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ttnorms_regular"
+                        android:gravity="center_vertical"
+                        android:text="заполните все поля"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/char_layout_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    android:layout_weight="4">
+
+                                    <ImageView
+                                        android:id="@+id/char_layout_nickname_bg"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:srcCompat="@drawable/auth_bg_email" />
+
+                                    <ImageView
+                                        android:id="@+id/char_layout_nickname_image"
+                                        android:layout_width="@dimen/_9sdp"
+                                        android:layout_height="@dimen/_9sdp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="@dimen/_14sdp"
+                                        app:srcCompat="@drawable/ic_launcher_user" />
+
+                                    <EditText
+                                        android:id="@+id/char_layout_nickname_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_42sdp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="@dimen/_42sdp"
+                                        android:layout_marginEnd="@dimen/_12sdp"
+                                        android:background="@null"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/ttnorms_regular"
+                                        android:gravity="center_vertical"
+                                        android:hint="Имя"
+                                        android:inputType="textPersonName"
+                                        android:maxLines="1"
+                                        android:singleLine="true"
+                                        android:textColor="#ffffff"
+                                        android:textColorHighlight="#ffffff"
+                                        android:textColorHint="#66ffffff"
+                                        android:textColorLink="#ffffff"
+                                        android:textSize="@dimen/_10sdp" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_6sdp"
+                                    android:layout_weight="4">
+
+                                    <ImageView
+                                        android:id="@+id/char_layout_nickname_bg2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:srcCompat="@drawable/auth_bg_email" />
+
+                                    <EditText
+                                        android:id="@+id/char_layout_nickname_input2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_42sdp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:layout_marginEnd="@dimen/_12sdp"
+                                        android:background="@null"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/ttnorms_regular"
+                                        android:gravity="center_vertical"
+                                        android:hint="Фамилия"
+                                        android:inputType="textPersonName"
+                                        android:maxLines="1"
+                                        android:singleLine="true"
+                                        android:textColor="#ffffff"
+                                        android:textColorHighlight="#ffffff"
+                                        android:textColorHint="#66ffffff"
+                                        android:textColorLink="#ffffff"
+                                        android:textSize="@dimen/_10sdp" />
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_nickname_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/char_layout_nickname_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/char_layout_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <ImageView
+                                android:id="@+id/char_layout_pass_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/auth_bg_email" />
+
+                            <ImageView
+                                android:id="@+id/char_layout_pass_image"
+                                android:layout_width="@dimen/_9sdp"
+                                android:layout_height="@dimen/_9sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                app:srcCompat="@drawable/ic_launcher_password" />
+
+                            <EditText
+                                android:id="@+id/char_layout_pass_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_42sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/ttnorms_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Введите пароль"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ffffff"
+                                android:textColorHighlight="#ffffff"
+                                android:textColorHint="#66ffffff"
+                                android:textColorLink="#ffffff"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_pass_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/char_layout_pass_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/char_layout_pass_recover"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:paddingTop="@dimen/_6sdp"
+                            android:text="Забыли пароль?"
+                            android:textAlignment="textEnd"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_7sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/char_layout_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/char_layout_code_send"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:paddingBottom="@dimen/_6sdp"
+                            android:text="Не пришёл код? Отправить повторно"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_7sdp" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <ImageView
+                                android:id="@+id/char_layout_code_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/auth_bg_email" />
+
+                            <ImageView
+                                android:id="@+id/char_layout_code_image"
+                                android:layout_width="@dimen/_9sdp"
+                                android:layout_height="@dimen/_9sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                app:srcCompat="@drawable/ic_launcher_code" />
+
+                            <EditText
+                                android:id="@+id/char_layout_code_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_42sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/ttnorms_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Введите код из VK Guard"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ffffff"
+                                android:textColorHighlight="#ffffff"
+                                android:textColorHint="#66ffffff"
+                                android:textColorLink="#ffffff"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_code_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/char_layout_code_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/char_layout_promo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_42sdp">
+
+                            <ImageView
+                                android:id="@+id/char_layout_promo_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/auth_bg_email" />
+
+                            <ImageView
+                                android:id="@+id/char_layout_promo_image"
+                                android:layout_width="@dimen/_9sdp"
+                                android:layout_height="@dimen/_9sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                app:srcCompat="@drawable/ic_launcher_promo" />
+
+                            <EditText
+                                android:id="@+id/char_layout_promo_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_42sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_42sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/ttnorms_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Введите промокод (если есть)"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ffffff"
+                                android:textColorHighlight="#ffffff"
+                                android:textColorHint="#66ffffff"
+                                android:textColorLink="#ffffff"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_promo_error"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:background="@drawable/auth_bg_error_message"
+                                android:translationY="@dimen/_11sdp">
+
+                                <TextView
+                                    android:id="@+id/char_layout_promo_error_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/ttnorms_medium"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/_1sdp"
+                                    android:paddingBottom="@dimen/_1sdp"
+                                    android:text="Введен неверный E-mail "
+                                    android:textColor="#d26969"
+                                    android:textSize="@dimen/_7sdp" />
+                            </FrameLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/char_layout_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="Выберите пол персонажа"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_sex_male"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/char_layout_sex_bg_male"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:srcCompat="@drawable/auth_bg_email" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_16sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        app:srcCompat="@drawable/ic_launcher_male" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ttnorms_regular"
+                                        android:text="Мужской"
+                                        android:textColor="#ffffff"
+                                        android:textSize="@dimen/_11sdp" />
+                                </LinearLayout>
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_sex_female"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/char_layout_sex_bg_female"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:srcCompat="@drawable/auth_bg_selected" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_16sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        app:srcCompat="@drawable/ic_launcher_female" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/ttnorms_regular"
+                                        android:text="Женский"
+                                        android:textColor="#ffffff"
+                                        android:textSize="@dimen/_11sdp" />
+                                </LinearLayout>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/char_layout_skin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="Выберите скин"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_skin_left"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginEnd="@dimen/_8sdp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:srcCompat="@drawable/auth_bg_email" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_16sdp"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/ic_launcher_skin_arrow" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/char_layout_skin_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:srcCompat="@drawable/auth_bg_skin" />
+
+                                <ImageView
+                                    android:id="@+id/char_layout_skin_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_1sdp"
+                                    android:scaleType="fitCenter" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/char_layout_skin_right"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_8sdp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:srcCompat="@drawable/auth_bg_email" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_16sdp"
+                                    android:layout_height="@dimen/_16sdp"
+                                    android:layout_gravity="center"
+                                    android:rotation="180"
+                                    app:srcCompat="@drawable/ic_launcher_skin_arrow" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/char_layout_rules"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/char_layout_rules_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_19sdp"
+                            android:layout_gravity="center"
+                            android:button="@drawable/checkbox_launcher"
+                            android:checked="false"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:paddingStart="@dimen/_14sdp"
+                            android:text="Согласен с правилами сервера"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/char_layout_continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_42sdp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:background="@drawable/auth_bg_button">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_37sdp"
+                            android:layout_marginEnd="@dimen/_37sdp"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:gravity="center"
+                            android:text="Продолжить"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_12sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
