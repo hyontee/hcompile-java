@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/footer_layout"
+        app:layout_constraintStart_toStartOf="@+id/footer_layout"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/story_caption_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ttnorms_regular"
+                android:text="Личный"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/story_caption_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ttnorms_bold"
+                android:text="кабинет"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_16sdp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_settings"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_14sdp"
+            app:srcCompat="@drawable/ic_launcher_settings" />
+
+        <ImageView
+            android:id="@+id/btn_faq"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_launcher_faq" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/details_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_22sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_22sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="@dimen/_4sdp"
+        android:scrollbarThumbVertical="@drawable/ic_launcher_scrollbar_thumb"
+        android:scrollbarTrackVertical="@drawable/ic_launcher_scrollbar_track"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/footer_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/server_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/ttnorms_light"
+                android:text="Статистика аккаунта"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_66sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_gravity="end|center_vertical"
+                        android:background="#1affffff" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_cabinet_level" />
+
+                        <TextView
+                            android:id="@+id/info_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="Уровень: 25"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_9sdp"
+                            app:autoSizeMaxTextSize="@dimen/_9sdp"
+                            app:autoSizeMinTextSize="@dimen/_3sdp"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/_66sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/cabinet_char_bg" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:layout_marginEnd="@dimen/_1sdp"
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="@dimen/_3sdp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="false">
+
+                        <ImageView
+                            android:id="@+id/info_skin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter" />
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_gravity="start|center_vertical"
+                        android:background="#1affffff" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_cabinet_exp" />
+
+                        <TextView
+                            android:id="@+id/info_exp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:fontFamily="@font/ttnorms_regular"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="Exp: 25/105"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_9sdp"
+                            app:autoSizeMaxTextSize="@dimen/_9sdp"
+                            app:autoSizeMinTextSize="@dimen/_3sdp"
+                            app:autoSizeTextType="uniform" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_money" />
+
+                <TextView
+                    android:id="@+id/info_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Денег: 2 500 123"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp"
+                    app:autoSizeMaxTextSize="@dimen/_9sdp"
+                    app:autoSizeMinTextSize="@dimen/_3sdp"
+                    app:autoSizeTextType="uniform" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#1affffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_bank" />
+
+                <TextView
+                    android:id="@+id/info_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:text="Денег в банке: 25 500 123"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#1affffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_work" />
+
+                <TextView
+                    android:id="@+id/info_fraction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:text="Фракция: LSPD, ранг: 9"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#1affffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_house" />
+
+                <TextView
+                    android:id="@+id/info_house"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:text="Дом/квартира: №225"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#1affffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_biz" />
+
+                <TextView
+                    android:id="@+id/info_biz1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:text="Бизнес: АЗС Батырево"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/info_biz2_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#1affffff" />
+
+            <LinearLayout
+                android:id="@+id/info_biz2_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_biz" />
+
+                <TextView
+                    android:id="@+id/info_biz2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:text="Бизнес: АЗС Батырево"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#1affffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_rub" />
+
+                <TextView
+                    android:id="@+id/info_donate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:text="Донат счёт: 5000 руб"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#1affffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_9sdp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_cabinet_phone" />
+
+                <TextView
+                    android:id="@+id/info_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:fontFamily="@font/ttnorms_regular"
+                    android:gravity="center"
+                    android:text="Номер телефона: 210-095"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_9sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/server_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/footer_layout"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/footer_layout"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        app:layout_constraintVertical_bias="0.042">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ttnorms_light"
+            android:text="Ваш сервер"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/select_server_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintDimensionRatio="791:186"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+            <ImageView
+                android:id="@+id/server_background"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_server_bg" />
+
+            <LinearLayout
+                android:id="@+id/select_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    app:srcCompat="@drawable/ic_server" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/ttnorms_medium"
+                    android:text="Выбрать сервер"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/serverinfo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/server_item_image"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    app:srcCompat="@drawable/ic_launcher_matreshka" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_46sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/serverinfo_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ttnorms_medium"
+                        android:maxLines="1"
+                        android:text="@string/launcher_sample_server"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_10sdp"
+                        app:autoSizeMaxTextSize="@dimen/_10sdp"
+                        app:autoSizeMinTextSize="@dimen/_3sdp"
+                        app:autoSizeTextType="uniform" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/serverinfo_person_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        app:cardBackgroundColor="#99259223"
+                        app:cardCornerRadius="@dimen/_2sdp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_4sdp"
+                            android:paddingEnd="@dimen/_4sdp">
+
+                            <TextView
+                                android:id="@+id/serverinfo_person_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/ttnorms_light"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="@string/launcher_character"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_6sdp"
+                                app:autoSizeMaxTextSize="@dimen/_6sdp"
+                                app:autoSizeMinTextSize="@dimen/_3sdp"
+                                app:autoSizeTextType="uniform" />
+
+                            <TextView
+                                android:id="@+id/serverinfo_person_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:fontFamily="@font/ttnorms_medium"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="Jek_Delphi"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_6sdp"
+                                app:autoSizeMaxTextSize="@dimen/_6sdp"
+                                app:autoSizeMinTextSize="@dimen/_3sdp"
+                                app:autoSizeTextType="uniform" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_arrow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="791:230"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.7324">
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_main_footer" />
+
+        <FrameLayout
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView29"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_launcher_exit" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_11sdp"
+                    android:fontFamily="@font/ttnorms_medium"
+                    android:text="Вернуться назад"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.065" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_20sdp">
+
+    <ImageView
+        android:id="@+id/server_item_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="791:186"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_server_bg" />
+
+    <ImageView
+        android:id="@+id/server_item_image"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_matreshka" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/server_item_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/server_item_image"
+        app:layout_constraintTop_toTopOf="@+id/server_item_image">
+
+        <TextView
+            android:id="@+id/server_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/ttnorms_medium"
+            android:maxLines="1"
+            android:text="@string/serverlist_mobile_1"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_10sdp"
+            app:autoSizeMaxTextSize="@dimen/_10sdp"
+            app:autoSizeMinTextSize="@dimen/_3sdp"
+            app:autoSizeTextType="uniform" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/server_item_status_image"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:alpha="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_launcher_star" />
+
+            <TextView
+                android:id="@+id/server_item_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:fontFamily="@font/ttnorms_medium"
+                android:gravity="center_vertical"
+                android:text="Низкая загруженность"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_8sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/server_recommend_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/server_recommend_text"
+        app:layout_constraintEnd_toEndOf="@+id/server_recommend_text"
+        app:layout_constraintStart_toStartOf="@+id/server_recommend_text"
+        app:layout_constraintTop_toTopOf="@+id/server_recommend_text"
+        app:srcCompat="@drawable/recommended_bg"
+        app:tint="#368418" />
+
+    <TextView
+        android:id="@+id/server_recommend_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ttnorms_bold"
+        android:paddingStart="@dimen/_9sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:paddingEnd="@dimen/_9sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:text="@string/serverlist_rec"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
