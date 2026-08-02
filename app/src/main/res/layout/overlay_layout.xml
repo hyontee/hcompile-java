@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@color/panel_bg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <Button android:id="@+id/btnEnable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_enable"
+            android:background="@color/btn_bg" />
+
+        <Button android:id="@+id/btnDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/btn_disable"
+            android:background="@color/btn_bg" />
+
+        <Button android:id="@+id/btnSpecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/btn_special"
+            android:background="@color/btn_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/white"
+            android:text="Shablon nomi:" />
+
+        <EditText android:id="@+id/editTemplateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="pm" />
+
+        <EditText android:id="@+id/editTemplateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="2"
+            android:hint="/pm {id} Asalomu alaykum, {name}, yordamga boryabman." />
+
+        <Button android:id="@+id/btnSaveTemplate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/btn_save_template"
+            android:background="@color/btn_bg" />
+
+        <Button android:id="@+id/btnDeleteTemplate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/btn_delete_template"
+            android:background="@color/btn_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/accent"
+            android:textStyle="bold"
+            android:text="Avto-javob sozlamalari" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/lbl_package_name" />
+
+        <EditText android:id="@+id/editPackageName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="com.example.sampmobile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="@string/lbl_report_regex" />
+
+        <EditText android:id="@+id/editReportRegex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/lbl_report_regex_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="@string/lbl_autoreply_mode" />
+
+        <RadioGroup android:id="@+id/radioAutoReplyMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton android:id="@+id/radioOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/mode_off" />
+
+            <RadioButton android:id="@+id/radioPrepare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/mode_prepare" />
+
+            <RadioButton android:id="@+id/radioFull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/mode_full" />
+        </RadioGroup>
+
+        <Button android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Sozlamalarni saqlash"
+            android:background="@color/btn_bg" />
+
+        <TextView android:id="@+id/txtStats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/white"
+            android:text="" />
+
+    </LinearLayout>
+</ScrollView>

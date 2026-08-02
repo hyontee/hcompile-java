@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shadow Admin Tool</string>
+    <string name="accessibility_service_description">Shadow RP admin panelini o\'yin chatidan report va shablon xabarlarni aniqlash uchun kuzatadi.</string>
+
+    <string name="btn_open_accessibility">Accessibility xizmatini yoqish</string>
+    <string name="btn_open_overlay_perm">Overlay ruxsatini berish</string>
+    <string name="btn_start_service">Overlay panelni ishga tushirish</string>
+
+    <string name="btn_enable">Включить тулс</string>
+    <string name="btn_disable">Выключить тулс</string>
+    <string name="btn_special">Открыть спец.возможности</string>
+    <string name="btn_save_template">Сохранить шаблон</string>
+    <string name="btn_delete_template">Удалить</string>
+
+    <string name="lbl_package_name">O\'yin (SAMP client) paket nomi</string>
+    <string name="lbl_report_regex">Report matn formati (regex)</string>
+    <string name="lbl_report_regex_hint">masalan: \\[(\\d+)\\]\\s*(.+?)\\s+yordam so\'radi</string>
+    <string name="lbl_id_group">ID guruh raqami (regexdagi qavs tartibi)</string>
+    <string name="lbl_autoreply_mode">Avto-javob rejimi</string>
+    <string name="mode_off">O\'chirilgan</string>
+    <string name="mode_prepare">Faqat tayyorlab qo\'y</string>
+    <string name="mode_full">To\'liq avtomatik yubor</string>
+</resources>
