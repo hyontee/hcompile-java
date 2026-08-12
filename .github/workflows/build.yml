@@ -1,0 +1,87 @@
+name: Build Java Android Debug APK
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Java 8
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '8'
+        cache: 'gradle'
+
+    - name: Validate Gradle Wrapper
+      run: |
+        if (Test-Path "gradlew") {
+          echo "Gradle wrapper found"
+          .\gradlew --version
+        } else {
+          echo "ERROR: No gradlew found. Gradle Wrapper is required for this workflow."
+          exit 1
+        }
+      shell: pwsh
+
+    - name: Cache Gradle dependencies
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+
+    - name: Clean project
+      run: .\gradlew clean
+      shell: pwsh
+
+    - name: Build Debug APK
+      id: build
+      run: |
+        # Build with assembleDebug
+        .\gradlew assembleDebug --stacktrace
+        
+        # Check if APK was created
+        $apkFiles = Get-ChildItem -Path . -Recurse -Filter "*.apk" | Where-Object { $_.FullName -notmatch "buildSrc" }
+        
+        if ($apkFiles.Count -gt 0) {
+          $apkPath = $apkFiles[0].FullName
+          echo "APK_PATH=$apkPath" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          echo "APK_FOUND=true" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          echo "APK_NAME=$($apkFiles[0].Name)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+        } else {
+          echo "APK_FOUND=false" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          exit 1
+        }
+      shell: pwsh
+
+    - name: List build outputs
+      if: env.APK_FOUND == 'true'
+      run: |
+        echo "Build outputs:"
+        dir /s *.apk
+      shell: cmd
+
+    - name: Upload Debug APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: debug-apk
+        path: |
+          app/build/outputs/apk/**/*.apk
+          */build/outputs/apk/**/*.apk
+          **/build/outputs/apk/**/*.apk
+        if-no-files-found: warn
+        retention-days: 7
