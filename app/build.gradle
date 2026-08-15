@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 26
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        applicationId 'com.matreshka.game'
+        versionName 'matreshka-bonus-v1'
+        versionCode 10
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        //signingConfig signingConfigs.debug
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.tuyenmonkey:mkloader:1.4.0'
+    implementation group: 'org.ini4j', name: 'ini4j', version: '0.5.4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "com.github.skydoves:colorpickerpreference:2.0.4"
+    implementation 'ru.egslava:MaskedEditText:1.0.5'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.github.Triggertrap:SeekArc:v1.1'
+}

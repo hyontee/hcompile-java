@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.matreshka.game",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 10,
+      "versionName": "matreshka-bonus-v1",
+      "enabled": true,
+      "outputFile": "app-debug.apk"
+    }
+  ]
+}
