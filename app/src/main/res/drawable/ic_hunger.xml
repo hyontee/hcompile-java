@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:height="27.0dip" android:width="26.0dip" android:viewportWidth="26.0" android:viewportHeight="27.0">
-	<group>
-		<clip-path android:pathData="M0,0.9858h25.5766v25.5766h-25.5766z" />
-		<path android:fillColor="@drawable/ic_hunger__0" android:pathData="M23.1788,12.1755H2.3978C1.0742,12.1755 0,13.2498 0,14.5733C0,15.8969 1.0742,16.9712 2.3978,16.9712H23.1788C24.5024,16.9712 25.5766,15.8969 25.5766,14.5733C25.5766,13.2498 24.5024,12.1755 23.1788,12.1755Z" />
-		<path android:fillColor="@drawable/ic_hunger__1" android:pathData="M16.7846,4.1829H8.792C5.1776,4.1829 2.1069,6.8876 1.6529,10.4763C1.6481,10.5099 1.6609,10.5435 1.6609,10.577H23.9141C23.9141,10.5435 23.9269,10.5099 23.9237,10.4763C23.4681,6.8876 20.3989,4.1829 16.7846,4.1829Z" />
-		<path android:fillColor="@drawable/ic_hunger__2" android:pathData="M1.5986,18.5698V19.3691C1.5986,21.5735 3.3921,23.3654 5.5949,23.3654H19.9818C22.1862,23.3654 23.9781,21.5735 23.9781,19.3691V18.5698H1.5986Z" />
-	</group>
-</vector>
