@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Brilliant</string>
+    <string name="recovery_pass">molnya ss</string>
+    <string name="lildrug">PRIVATE (arm64-v8a)</string>
+
+    <string name="select_spawn_title">Выберите место появления</string>
+    <string name="select_spawn_desc">Укажите одно из доступных мест, где вы хотели бы появится</string>
+    <string name="exit_pos_title">Место выхода</string>
+    <string name="select_pos">ВЫБРАТЬ МЕСТО</string>
+
+    <string name="nick_name"><font color="#FCF7F7">Ваш ник-нейм. </font>(пример: Name_Surname)</string>
+
+    <string name="azs">Заправочная станция</string>
+    <string name="input_fuel">Введите кол-во топлива</string>
+    <string name="full">ПОЛНЫЙ</string>
+    <string name="max_fuel_in_vehicle">Вместимость вашего бака</string>
+    <string name="azs_releaze_price">Стоимость заправки</string>
+
+    <string name="buy_car_number">Покупка гос.номера</string>
+    <string name="example_ru_num">x777am 777</string>
+    <string name="example_ua_num">AA 7777 AA</string>
+    <string name="example_by_num">1234 AB-7</string>
+    <string name="example_kz_num">444epa 77</string>
+    <string name="buy_number_price">Номерные знаки\t\t\t\t <font color='#6BFF73'>₽ 5,000</font></string>
+    <string name="change_number_price">Прокрут номера\t\t <font color='#6BFF73'>₽ 1,500</font></string>
+</resources>
